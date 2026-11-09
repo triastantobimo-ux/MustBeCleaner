@@ -10,6 +10,8 @@
 Jalankan dari root repo dengan SDK 10 aktif (lihat `global.json`):
 
 ```powershell
+.\build.cmd
+# atau manual:
 dotnet test MustBeCleaner.sln -m:1 --no-build
 ```
 

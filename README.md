@@ -25,13 +25,21 @@ Inspector, Duplicates, Adapters, Domain, dan Infrastructure tidak boleh merefere
 Perintah (dari root repo):
 
 ```powershell
+.\build.cmd                          # build Debug + test
+.\build.cmd -Configuration Release   # build Release + test
+.\build.cmd -NoTest                  # build saja
+```
+
+`build.cmd` memilih SDK 10 yang terpasang (PATH, `%USERPROFILE%\.dotnet10`, atau Program Files). Perintah manual:
+
+```powershell
 # global.json meminta SDK 10.0.100 (rollForward latestFeature).
 dotnet --version   # harus 10.0.x
 dotnet build MustBeCleaner.sln -m:1
 dotnet test MustBeCleaner.sln -m:1 --no-build
 ```
 
-Jika `dotnet --version` masih 9.x, SDK 10 belum ada di PATH. Tambahkan foldernya ke `PATH` dan set `DOTNET_ROOT` ke folder yang sama sebelum menjalankan perintah di atas. `-m:1` mencegah kunci file antarproyek saat build paralel.
+Jika `dotnet --version` masih 9.x, SDK 10 belum ada di PATH. Tambahkan foldernya ke `PATH` dan set `DOTNET_ROOT` ke folder yang sama sebelum menjalankan perintah di atas. `-m:1` mencegah kunci file antarproyek saat build paralel. CI menjalankan build dan test Release yang sama di `.github/workflows/ci.yml`.
 
 Konvensi tes:
 - Tes keselamatan hanya memakai `FakeFileSystem` atau `Sandbox` (folder temp sendiri). Data riil pengguna tidak pernah disentuh (R21.2).
