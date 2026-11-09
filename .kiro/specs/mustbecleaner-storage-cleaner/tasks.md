@@ -52,19 +52,19 @@ Catatan penting:
     - Catat rule ID, versi rule, dan alasan; jangan jadikan nama `cache`/`temp`, ekstensi, tanggal, atau ketiadaan proses sebagai dasar tunggal Eligible
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 7.7, 11.1_
 
-  - [ ]* 2.4 Tulis property test untuk proteksi mengalahkan allow
+  - [x]* 2.4 Tulis property test untuk proteksi mengalahkan allow
     - **Property 1: Proteksi mengalahkan allow**
     - **Validates: Requirements 5.4, 6.6**
 
-  - [ ]* 2.5 Tulis property test untuk unknown memblokir dan Eligible hanya jika semua true
+  - [x]* 2.5 Tulis property test untuk unknown memblokir dan Eligible hanya jika semua true
     - **Property 2: Unknown memblokir, Eligible hanya jika semua true**
     - **Validates: Requirements 5.1, 5.2, 5.3, 11.1**
 
-  - [ ]* 2.6 Tulis property test untuk klasifikasi deterministik
+  - [x]* 2.6 Tulis property test untuk klasifikasi deterministik
     - **Property 3: Klasifikasi deterministik**
     - **Validates: Requirements 5.5, 5.6**
 
-  - [ ]* 2.7 Tulis property test untuk exclusion, path terlarang, dan normalisasi idempoten
+  - [x]* 2.7 Tulis property test untuk exclusion, path terlarang, dan normalisasi idempoten
     - **Property 4: Exclusion mengalahkan include; path terlarang ditolak; normalisasi idempoten**
     - **Validates: Requirements 1.7, 7.4, 7.5**
 
@@ -134,7 +134,7 @@ Catatan penting:
     - Nonaktif default di area Advanced, tanpa checkbox tercentang, tanpa kemampuan modifikasi, tanpa registry writer
     - _Requirements: 17.1, 17.2, 17.3, 17.4, 17.5_
 
-  - [ ]* 5.6 Tulis property test untuk total byte tanpa overlap
+  - [x]* 5.6 Tulis property test untuk total byte tanpa overlap
     - **Property 5: Total byte tanpa overlap**
     - **Validates: Requirements 3.7, 4.6, 10.2, 14.4, 18.7**
 

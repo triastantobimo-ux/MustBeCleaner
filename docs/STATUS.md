@@ -4,10 +4,10 @@ Diperbarui: 9 November 2026. Sumber kebenaran per tugas: `.kiro/specs/mustbeclea
 
 ## Ringkasan
 
-- Spec lengkap: requirements (26 requirement), design (arsitektur Split-Privilege Pipeline, 21 correctness property), tasks (98 item menurut hitungan tool; 13 tugas daun selesai, 17 checkbox termasuk tugas induk).
+- Spec lengkap: requirements (26 requirement), design (arsitektur Split-Privilege Pipeline, 21 correctness property), tasks (98 item menurut hitungan tool; 18 tugas daun selesai, 22 checkbox termasuk tugas induk).
 - Stack diputuskan: C# di .NET 10 LTS, WPF dengan WPF UI 4.3.0, CommunityToolkit.Mvvm, SQLite, xUnit, FsCheck. Lihat `docs/decisions/0001-stack.md`.
 - Belum ada UI produk, belum ada fitur yang mengubah file pengguna. I/O yang ada hanya enumerasi read-only dan Data_Directory (journal SQLite, log, retention).
-- Build dan test seluruh solution sudah dijalankan sebagai satu kesatuan: 12 proyek, 0 warning, 0 error; 392 test lulus, 0 gagal, 0 dilewati (TestKit 48, Adapters 111, Infrastructure 66, Domain 133, Inspector 34).
+- Build dan test seluruh solution sudah dijalankan sebagai satu kesatuan: 12 proyek, 0 warning, 0 error; 412 test lulus, 0 gagal, 0 dilewati (TestKit 48, Adapters 111, Infrastructure 66, Domain 137, Inspector 50).
 
 ## Tugas selesai
 
@@ -26,12 +26,17 @@ Diperbarui: 9 November 2026. Sumber kebenaran per tugas: `.kiro/specs/mustbeclea
 | 4.2 Logging, Exception_Log, retention | Logging tanpa secret, retention terbatas | 66 test lulus (Infrastructure) |
 | 5.1 Enumerasi read-only | `StorageInspector`, interop Win32 read-only | 24 test lulus |
 | 5.2 Identitas Item dan total unik | `UniqueTotals` (hard link, tanpa double count) | 34 test lulus (Inspector) |
+| 2.4 Property 1 | Proteksi mengalahkan allow | 100 iterasi FsCheck (Domain) |
+| 2.5 Property 2 | Unknown memblokir; Eligible hanya jika semua true | 100 iterasi FsCheck (Domain) |
+| 2.6 Property 3 | Klasifikasi deterministik | 100 iterasi FsCheck (Domain) |
+| 2.7 Property 4 | Exclusion, path terlarang, normalisasi idempoten | 100 iterasi FsCheck (Domain) |
+| 5.6 Property 5 | Total byte tanpa overlap | 100 iterasi FsCheck (Inspector) |
 
-Sub-tugas opsional bertanda `*` (property test) belum dikerjakan. Tugas induk 1 sampai 4 ditandai selesai otomatis oleh tool; tugas induk 5 belum selesai.
+Sub-tugas property lain bertanda `*` (mis. 3.4, 4.3) belum dikerjakan. Tugas induk 1 sampai 4 ditandai selesai otomatis oleh tool; tugas induk 5 belum selesai.
 
 ## Verifikasi terakhir
 
-Build dan test dijalankan pada 9 November 2026 dengan SDK 10.0.403 dari `C:\Users\mika\.dotnet10` (bukan `dotnet` 9.0.320 bawaan PATH), Release dan Debug, `-m:1`. Rincian: 12 proyek, 0 warning, 0 error; 392 test lulus, 0 gagal, 0 dilewati.
+Build dan test dijalankan pada 9 November 2026 dengan SDK 10.0.403 dari `C:\Users\mika\.dotnet10` (bukan `dotnet` 9.0.320 bawaan PATH), Release dan Debug, `-m:1`. Rincian: 12 proyek, 0 warning, 0 error; 412 test lulus, 0 gagal, 0 dilewati.
 
 ## Tugas berikutnya (tidak dimulai)
 

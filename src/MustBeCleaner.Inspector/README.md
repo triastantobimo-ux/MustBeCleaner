@@ -1,6 +1,6 @@
 # MustBeCleaner.Inspector
 
-Status: task 5.1 done (enumeration) and the protection hook is wired to the Policy Core. Coverage persistence, overview and delta come later.
+Status: task 5.1 done (enumeration), the protection hook is wired to the Policy Core, and Property 5 (unique totals) is covered. Coverage persistence, overview and delta come later.
 
 Read-only metadata enumeration as a standard user. TIDAK boleh mereferensikan Executor. Referensi: Domain, Adapters, Infrastructure.
 
@@ -27,6 +27,7 @@ var report = UniqueTotals.Compute([new ScopeEntries("cache", scan.Entries)]);
 - Only files carry bytes; parents never re-add children (R3.7). One seen-set across Scopes in the grand total (R3.7).
 - Unavailable size is `null`, never zero; `IsLowerBound` flags it (R3.5, R7.6). Identity-less files dedupe by upper-cased path.
 - Duplicate Scope names throw `ArgumentException`.
+- Property 5 (`UniqueTotalsProperties`) checks unique totals across generated objects, hard links, directories and Scopes.
 
 ## Rules enforced
 

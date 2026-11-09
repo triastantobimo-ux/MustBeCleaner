@@ -1,7 +1,7 @@
 # MustBeCleaner.Domain
 Policy Core murni: tipe inti klasifikasi Item. Tanpa I/O, tanpa referensi ke proyek lain (R5-R7, design "Policy Core").
 
-Status: task 2.1, 2.2 dan 2.3 (`PolicyEngine.Classify`, daftar proteksi) selesai.
+Status: task 2.1, 2.2 dan 2.3 (`PolicyEngine.Classify`, daftar proteksi) selesai; property test 2.4-2.7 ada di `tests/MustBeCleaner.Domain.Tests/PolicyProperties.cs`.
 
 ## Public surface (namespace `MustBeCleaner.Domain`)
 | Tipe | Peran | Requirement |
