@@ -113,5 +113,5 @@ Product terms (Scanner, Item, Scan_Coverage, Exception_Log, Protected) are in th
 - **Protection rule** (`ProtectionRules`): fixed in-code rule that makes an Item Protected. No Adapter, score, custom include or administrator mode can lift it (ADR 0012).
 - **Transaction_Set** (`TransactionSet`): a database file plus its WAL, SHM and journal sidecars; protected together under one key.
 - **Forbidden path**: a raw path that fails normalization; classified Protected as `F-FORBIDDEN-PATH`.
-- **User exclusion**: path root from the RuleSet; classified Protected as `X-USER-EXCLUSION`, decided before every other rule.
+- **User exclusion**: path root from the RuleSet; classified Protected as `X-USER-EXCLUSION`, checked after path normalization and before protection, Adapter, and eligibility rules.
 - **Unowned extensionless file**: a file with no extension and no Adapter owner; Protected as it may be a binary.

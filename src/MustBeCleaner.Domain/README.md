@@ -19,7 +19,7 @@ Status: task 2.1, 2.2 dan 2.3 (`PolicyEngine.Classify`, daftar proteksi) selesai
 | `CanonicalPath`, `PathNormalization`, `PathRejection` | hasil normalisasi; nama 8.3 (`~N`) menjadi `UnresolvedShortName`, tidak ditebak (ADR 0011) | R7.5 |
 | `PathScope` | include + exclusion; `Decide` mengembalikan `ScopeDecision`; exclusion mengalahkan include | R1.6, R1.7 |
 
-| `PolicyEngine.Classify` | fungsi murni; urutan: exclusion, path terlarang, proteksi, volume non-NTFS-lokal, Adapter, kondisi R11.1 | R5, R6, R7.7, R11.1 |
+| `PolicyEngine.Classify` | fungsi murni; urutan: normalisasi/path terlarang, exclusion, proteksi, volume non-NTFS-lokal, Adapter, kondisi R11.1 | R5, R6, R7.7, R11.1 |
 | `AdapterMatch` | input Adapter di level Domain (tanpa referensi ke proyek Adapters) | R5.5, R11.1 |
 | `TransactionSet.KeyOf` | kunci sama untuk db + wal/shm/journal | R6.4 |
 

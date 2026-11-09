@@ -1,13 +1,13 @@
 # Status proyek MustBeCleaner
 
-Diperbarui: 9 November 2026. Sumber kebenaran per tugas: `.kiro/specs/mustbecleaner-storage-cleaner/tasks.md`. Eksekusi dihentikan atas permintaan pengguna setelah gelombang tugas yang sedang berjalan selesai. Tidak ada tugas lanjutan yang dimulai.
+Diperbarui: 9 November 2026. Sumber kebenaran per tugas: `.kiro/specs/mustbecleaner-storage-cleaner/tasks.md`. Baseline seluruh solution sudah di-commit; pekerjaan lanjutan dicatat di bagian bawah.
 
 ## Ringkasan
 
-- Spec lengkap: requirements (26 requirement), design (arsitektur Split-Privilege Pipeline, 21 correctness property), tasks (98 item menurut hitungan tool; 15 selesai).
+- Spec lengkap: requirements (26 requirement), design (arsitektur Split-Privilege Pipeline, 21 correctness property), tasks (98 item menurut hitungan tool; 13 tugas daun selesai, 17 checkbox termasuk tugas induk).
 - Stack diputuskan: C# di .NET 10 LTS, WPF dengan WPF UI 4.3.0, CommunityToolkit.Mvvm, SQLite, xUnit, FsCheck. Lihat `docs/decisions/0001-stack.md`.
-- Belum ada UI produk, belum ada fitur yang mengubah file. Semua kode yang ada bersifat read-only atau murni (tanpa I/O).
-- Kode diuji hanya pada proyek yang disentuh tiap tugas. Build dan test seluruh solution belum dijalankan sebagai satu kesatuan: UNVERIFIED.
+- Belum ada UI produk, belum ada fitur yang mengubah file pengguna. I/O yang ada hanya enumerasi read-only dan Data_Directory (journal SQLite, log, retention).
+- Build dan test seluruh solution sudah dijalankan sebagai satu kesatuan: 12 proyek, 0 warning, 0 error; 392 test lulus, 0 gagal, 0 dilewati (TestKit 48, Adapters 111, Infrastructure 66, Domain 133, Inspector 34).
 
 ## Tugas selesai
 
@@ -28,6 +28,10 @@ Diperbarui: 9 November 2026. Sumber kebenaran per tugas: `.kiro/specs/mustbeclea
 | 5.2 Identitas Item dan total unik | `UniqueTotals` (hard link, tanpa double count) | 34 test lulus (Inspector) |
 
 Sub-tugas opsional bertanda `*` (property test) belum dikerjakan. Tugas induk 1 sampai 4 ditandai selesai otomatis oleh tool; tugas induk 5 belum selesai.
+
+## Verifikasi terakhir
+
+Build dan test dijalankan pada 9 November 2026 dengan SDK 10.0.403 dari `C:\Users\mika\.dotnet10` (bukan `dotnet` 9.0.320 bawaan PATH), Release dan Debug, `-m:1`. Rincian: 12 proyek, 0 warning, 0 error; 392 test lulus, 0 gagal, 0 dilewati.
 
 ## Tugas berikutnya (tidak dimulai)
 

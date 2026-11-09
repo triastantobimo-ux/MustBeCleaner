@@ -2,9 +2,9 @@ namespace MustBeCleaner.Domain;
 
 /// <summary>
 /// Pure classification entry point of the Policy Core (R5, R6, R7.3, R7.7, R11.1). Evaluation order,
-/// first match wins: user exclusion, forbidden path, protection rules, volume support, Adapter
-/// match, eligibility conditions (R5.7; ADR 0012). Nothing before the last step can be undone by a
-/// later one, and no input lifts a Protected result (R5.4, R6.6).
+/// first match wins: path normalization (a path that fails it is forbidden), user exclusion, protection
+/// rules, volume support, Adapter match, eligibility conditions (R5.7; ADR 0012). Nothing before the last
+/// step can be undone by a later one, and no input lifts a Protected result (R5.4, R6.6).
 /// </summary>
 public static class PolicyEngine
 {
@@ -18,15 +18,17 @@ public static class PolicyEngine
         ArgumentNullException.ThrowIfNull(ruleSet);
         var version = ruleSet.Version;
 
-        // 1. User exclusion (R1.6, R1.7).
+        // 1. Normalize the path (R7.4, R7.5). Exclusion matching needs the canonical form, so a path
+        // that cannot be normalized is forbidden before any other rule can see it.
         var normalized = PathPolicy.Normalize(item.Identity.CanonicalPath);
         if (!normalized.IsCanonical)
         {
-            // 2. Forbidden path (R7.4, R7.5). A path that cannot be normalized is never actionable.
             return new(Status.Protected, "F-FORBIDDEN-PATH", version,
                 [$"Path refused: {normalized.Reason} (R7.4, R7.5)."], NoConditions);
         }
         var path = normalized.Path!.Value;
+
+        // 2. User exclusion (R1.6, R1.7).
         if (ruleSet.Exclusions.Any(e => PathPolicy.IsSameOrUnder(path, e)))
             return new(Status.Protected, "X-USER-EXCLUSION", version,
                 ["Covered by a user exclusion (R1.6, R1.7)."], NoConditions);

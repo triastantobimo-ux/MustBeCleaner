@@ -3,7 +3,7 @@
 Status: diputuskan oleh implementasi task 2.3 (belum ada keputusan pengguna terpisah; dapat dibalik sebelum task 2.4).
 
 ## Keputusan
-- `PolicyEngine.Classify` mengevaluasi berurutan, yang pertama cocok menang: exclusion pengguna (`X-USER-EXCLUSION`), path terlarang (`F-FORBIDDEN-PATH`), protection rule (`P-*`), volume non-NTFS-lokal (`I-UNSUPPORTED-VOLUME`, InventoryOnly), Adapter match, kondisi eligibility R11.1.
+- `PolicyEngine.Classify` mengevaluasi berurutan, yang pertama cocok menang: normalisasi path (gagal normalisasi berarti path terlarang, `F-FORBIDDEN-PATH`), exclusion pengguna (`X-USER-EXCLUSION`), protection rule (`P-*`), volume non-NTFS-lokal (`I-UNSUPPORTED-VOLUME`, InventoryOnly), Adapter match, kondisi eligibility R11.1. Normalisasi mendahului exclusion karena pencocokan exclusion membutuhkan bentuk kanonik.
 - Daftar proteksi (`ProtectionRules`) tetap di kode dan tidak punya input override. Adapter, skor, custom include, dan administrator mode tidak punya jalur ke sana (R5.4, R6.6).
 - Rule: `P-WINDOWS-CRITICAL`, `P-PROGRAM-FILES` (Program Files, WindowsApps), `P-NEVER-RECURSIVE-ROOT` (`Users\*\AppData\Local`, `...\Roaming`, `Users\*\.codex`), `P-BINARY` (EXE/DLL/SYS/OCX), `P-TRANSACTION-SET` (db/sqlite/sqlite3 + `-wal`/`-shm`/`-journal`, satu kunci lewat `TransactionSet.KeyOf`), `P-USER-DATA` (segmen credentials, sessions, history, memory/memories, worktrees, .git, repos/repositories, backups/backup, models), `P-EXTENSIONLESS-UNOWNED`.
 - File tanpa ekstensi dilindungi bila tidak punya pemilik Adapter. Di bawah root kritis ia sudah dilindungi oleh rule root.
