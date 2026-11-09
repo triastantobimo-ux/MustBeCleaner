@@ -12,9 +12,9 @@ public sealed class StorageInspector
 {
     private readonly IProtectionHook _protection;
 
-    /// <summary>Creates an inspector. <paramref name="protection"/> defaults to <see cref="WindowsCriticalRoots.Default"/>.</summary>
+    /// <summary>Creates an inspector. <paramref name="protection"/> defaults to <see cref="PolicyProtectionHook"/>.</summary>
     public StorageInspector(IProtectionHook? protection = null)
-        => _protection = protection ?? WindowsCriticalRoots.Default();
+        => _protection = protection ?? new PolicyProtectionHook();
 
     /// <summary>Enumerates every root, returning entries plus per-root coverage (R2.5).</summary>
     public ScanResult Scan(IReadOnlyList<string> roots, CancellationToken cancellation = default)
@@ -90,7 +90,7 @@ public sealed class StorageInspector
         var isDirectory = (attributes & Win32ReadOnly.AttributeDirectory) != 0;
         var kind = isReparse ? EntryKind.ReparsePoint : isDirectory ? EntryKind.Directory : EntryKind.File;
         var reparse = isReparse ? ReparseClassifier.Classify(reparseTag) : ReparseKind.None;
-        var verdict = _protection.Evaluate(path);
+        var verdict = _protection.Evaluate(path, isDirectory);
 
         ItemIdentity? identity = null;
         if (id is { } raw)

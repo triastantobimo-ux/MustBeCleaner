@@ -122,6 +122,20 @@ public class StorageInspectorTests
     }
 
     [Fact]
+    public void Default_hook_uses_the_policy_core_protection_list()
+    {
+        using var sb = new Sandbox();
+        var binary = sb.WriteFile(@"cache\payload.dll", "x");
+        var text = sb.WriteFile(@"cache\notes.txt", "y");
+
+        var r = new StorageInspector().Scan([sb.Root]);
+
+        Assert.True(Find(r, binary).IsProtected);
+        Assert.Equal("P-BINARY", Find(r, binary).ProtectionRuleId);
+        Assert.False(Find(r, text).IsProtected);
+    }
+
+    [Fact]
     [System.Runtime.Versioning.SupportedOSPlatform("windows")]
     public void Access_denied_is_recorded_and_the_scan_continues()
     {

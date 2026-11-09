@@ -13,10 +13,17 @@ public interface IProtectionHook
 {
     /// <summary>Evaluates an absolute path.</summary>
     ProtectionVerdict Evaluate(string fullPath);
+
+    /// <summary>
+    /// Evaluates an absolute path with its kind. The default forwards to <see cref="Evaluate(string)"/>;
+    /// hooks that use directory-only rules override this overload.
+    /// </summary>
+    ProtectionVerdict Evaluate(string fullPath, bool isDirectory) => Evaluate(fullPath);
 }
 
 /// <summary>
-/// Minimal built-in list of Windows critical roots used until the Policy Core list replaces it (R6.7).
+/// Minimal explicit list of Windows critical roots. The default hook is
+/// <see cref="PolicyProtectionHook"/>; this type stays for callers that want only a root check.
 /// A root protects itself and everything below it; matching is case-insensitive and segment-aware.
 /// </summary>
 public sealed class WindowsCriticalRoots : IProtectionHook

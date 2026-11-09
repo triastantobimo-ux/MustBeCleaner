@@ -1,6 +1,6 @@
 # MustBeCleaner.Inspector
 
-Status: task 5.1 done (enumeration). Coverage persistence, overview and delta come later.
+Status: task 5.1 done (enumeration) and the protection hook is wired to the Policy Core. Coverage persistence, overview and delta come later.
 
 Read-only metadata enumeration as a standard user. TIDAK boleh mereferensikan Executor. Referensi: Domain, Adapters, Infrastructure.
 
@@ -33,7 +33,7 @@ var report = UniqueTotals.Compute([new ScopeEntries("cache", scan.Entries)]);
 - No traversal of junction, symlink, mount point, cloud or unclassified reparse points; they are recorded (R7.1, R7.2).
 - Access denied is recorded and the scan continues (R6.8).
 - Roots must be absolute drive paths; relative, UNC, device and ADS roots are rejected (R7.5).
-- Protection comes from `IProtectionHook`. `WindowsCriticalRoots` is a minimal default; the Policy Core list replaces it (R6.7).
+- Protection comes from `IProtectionHook`. The default is `PolicyProtectionHook`, backed by `PolicyEngine.Classify`: the fixed protection list, user exclusions and forbidden paths all apply (R6.7). `WindowsCriticalRoots` is an explicit minimal hook for root-only checks.
 - No mutation API and no Executor reference (R1.3), checked by `ReadOnlyBoundaryTests`.
 
 Win32 calls live in `Infrastructure/Interop/Win32ReadOnly.cs`. See `docs/decisions/0050-read-only-win32-interop-port.md`.
