@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "example.cache",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md",
+  "fingerprint": { "appId": "ExampleApp", "versions": ["1.0.0"] },
+  "allowedRelativePaths": ["ExampleApp\\Cache", "ExampleApp\\Profiles\\*\\Code Cache"],
+  "category": "cache",
+  "trust": "inventory-only",
+  "blockers": ["owner-process-active", "lock-present"],
+  "processes": { "owners": ["ExampleApp.exe"], "helpers": ["ExampleApp Helper.exe"] },
+  "requiredEvidence": ["owner-idle", "age-over-grace-period"],
+  "regenerationCost": "low",
+  "recoveryPolicy": "quarantine"
+}

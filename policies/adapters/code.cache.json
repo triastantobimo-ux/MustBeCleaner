@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "code.electron.cache",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "Code", "versions": ["unverified"] },
+  "allowedRelativePaths": [
+    "AppData\\Roaming\\Code\\Cache",
+    "AppData\\Roaming\\Code\\Code Cache",
+    "AppData\\Roaming\\Code\\GPUCache",
+    "AppData\\Roaming\\Code\\CachedData",
+    "AppData\\Roaming\\Code\\CachedExtensionVSIXs"
+  ],
+  "category": "cache",
+  "trust": "inventory-only",
+  "blockers": ["owner-process-active", "lock-present", "root-not-deletable"],
+  "processes": { "owners": ["Code.exe"], "helpers": [] },
+  "requiredEvidence": ["cache-rule-validated", "per-profile-scope-confirmed", "app-idle"],
+  "regenerationCost": "unknown",
+  "recoveryPolicy": "quarantine"
+}

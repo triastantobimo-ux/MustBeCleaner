@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "claude.electron.cache",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "Claude", "versions": ["unverified"] },
+  "allowedRelativePaths": [
+    "AppData\\Roaming\\Claude\\Cache",
+    "AppData\\Roaming\\Claude\\Code Cache",
+    "AppData\\Roaming\\Claude\\GPUCache"
+  ],
+  "category": "cache",
+  "trust": "inventory-only",
+  "blockers": ["owner-process-active", "lock-present", "root-not-deletable"],
+  "processes": { "owners": ["Claude.exe"], "helpers": [] },
+  "requiredEvidence": ["cache-rule-validated", "app-idle", "documented-lifecycle"],
+  "regenerationCost": "unknown",
+  "recoveryPolicy": "quarantine"
+}

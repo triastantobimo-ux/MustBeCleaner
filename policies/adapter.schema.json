@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mustbecleaner.local/policies/adapter.schema.json",
+  "title": "MustBeCleaner Adapter (data-only)",
+  "description": "R8.1 declarative Adapter. R8.2: no executable content. additionalProperties is false everywhere so unknown or execution-implying fields (script, command, powershell, javascript, ...) are rejected. AdapterLoader enforces the same rules plus the executable-value and path checks that JSON Schema cannot express.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion", "ruleId", "version", "sourceReference", "fingerprint", "allowedRelativePaths",
+    "category", "trust", "blockers", "processes", "requiredEvidence", "regenerationCost", "recoveryPolicy"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "ruleId": { "type": "string", "minLength": 1, "description": "Stable rule ID, recorded with every classification (R5.6)." },
+    "version": { "type": "string", "minLength": 1, "description": "Rule version." },
+    "sourceReference": { "type": "string", "minLength": 1, "description": "Where the rule comes from, e.g. a doc path or evidence file. Never a script." },
+    "fingerprint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["appId", "versions"],
+      "properties": {
+        "appId": { "type": "string", "minLength": 1 },
+        "versions": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "description": "Exact app versions this rule was written for. A mismatch means Review (R8.13)." }
+      }
+    },
+    "allowedRelativePaths": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1, "not": { "pattern": "(^[\\\\/])|(:)|((^|[\\\\/])\\.\\.([\\\\/]|$))" } },
+      "description": "Paths relative to the app root. No drive, UNC, '..' or ':'. A whole segment may be '*'; partial wildcards are rejected. May be empty for inventory-only Adapters."
+    },
+    "category": { "enum": ["cache", "temp", "build-cache", "log", "user-data", "binary", "other"] },
+    "trust": { "enum": ["inventory-only", "validated"], "description": "inventory-only until the rule is validated (R8.3)." },
+    "blockers": { "type": "array", "items": { "type": "string", "minLength": 1 }, "description": "Condition identifiers that block action, e.g. owner-process-active." },
+    "processes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owners", "helpers"],
+      "properties": {
+        "owners": { "type": "array", "items": { "$ref": "#/$defs/processName" } },
+        "helpers": { "type": "array", "items": { "$ref": "#/$defs/processName" } }
+      },
+      "description": "Process image names that are matched to decide idleness. They are never launched."
+    },
+    "requiredEvidence": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "regenerationCost": { "enum": ["low", "medium", "high", "unknown"] },
+    "recoveryPolicy": { "enum": ["quarantine", "recycle-bin", "not-recoverable"] }
+  },
+  "$defs": {
+    "processName": { "type": "string", "minLength": 1, "maxLength": 255, "pattern": "^[^\\\\/:*?\"<>|\\u0000-\\u001f]+$" }
+  }
+}

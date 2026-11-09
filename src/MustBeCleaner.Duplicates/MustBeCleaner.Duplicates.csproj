@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\MustBeCleaner.Domain\MustBeCleaner.Domain.csproj" />
+    <ProjectReference Include="..\MustBeCleaner.Inspector\MustBeCleaner.Inspector.csproj" />
+  </ItemGroup>
+</Project>
+

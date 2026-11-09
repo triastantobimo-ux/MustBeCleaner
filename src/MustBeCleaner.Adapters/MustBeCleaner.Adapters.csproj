@@ -1,0 +1,3 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- ADR 0030: Adapters is self-contained (own small types, no Domain reference). -->
+</Project>

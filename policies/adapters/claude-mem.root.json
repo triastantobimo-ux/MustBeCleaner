@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "claude-mem.root",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "ClaudeMem", "versions": ["unverified"] },
+  "allowedRelativePaths": ["AppData\\Local\\claude-mem"],
+  "category": "other",
+  "trust": "inventory-only",
+  "blockers": ["root-not-deletable", "owner-process-active", "name-mem-is-not-temporary", "memory-data-possible"],
+  "processes": { "owners": ["claude-mem.exe"], "helpers": [] },
+  "requiredEvidence": ["ownership-verified", "documented-lifecycle", "cache-rule-validated"],
+  "regenerationCost": "unknown",
+  "recoveryPolicy": "quarantine"
+}

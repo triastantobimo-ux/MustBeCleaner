@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "claude-mem.bin.protected",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "ClaudeMem", "versions": ["unverified"] },
+  "allowedRelativePaths": ["AppData\\Local\\claude-mem\\bin"],
+  "category": "binary",
+  "trust": "inventory-only",
+  "blockers": ["protected-path", "application-binary-not-cache", "owner-process-active"],
+  "processes": { "owners": ["claude-mem.exe"], "helpers": [] },
+  "requiredEvidence": ["protection-rule-removed-by-user-decision"],
+  "regenerationCost": "high",
+  "recoveryPolicy": "not-recoverable"
+}

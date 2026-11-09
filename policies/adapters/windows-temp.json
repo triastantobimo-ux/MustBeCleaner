@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "windows.temp",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "WindowsTemp", "versions": ["unverified"] },
+  "allowedRelativePaths": ["AppData\\Local\\Temp\\*"],
+  "category": "temp",
+  "trust": "inventory-only",
+  "blockers": ["temp-root-never-deletable", "owner-unknown", "locked-or-recent", "active-process"],
+  "processes": { "owners": [], "helpers": [] },
+  "requiredEvidence": ["owner-verified", "grace-period-elapsed", "not-active", "path-allow-rule"],
+  "regenerationCost": "unknown",
+  "recoveryPolicy": "quarantine"
+}

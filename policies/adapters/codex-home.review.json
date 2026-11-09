@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "codex.home.review",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "Codex", "versions": ["unverified"] },
+  "allowedRelativePaths": [
+    ".codex\\.tmp",
+    ".codex\\cache",
+    ".codex\\plugins"
+  ],
+  "category": "other",
+  "trust": "inventory-only",
+  "blockers": ["owner-process-active", "lock-present", "active-plugins-protected", "root-not-deletable"],
+  "processes": { "owners": ["codex.exe"], "helpers": [] },
+  "requiredEvidence": ["lifecycle-verified", "age-verified", "active-ownership-verified", "app-idle"],
+  "regenerationCost": "unknown",
+  "recoveryPolicy": "quarantine"
+}

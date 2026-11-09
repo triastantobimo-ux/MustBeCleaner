@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "qoder.electron.protected",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "Qoder", "versions": ["unverified"] },
+  "allowedRelativePaths": [
+    "AppData\\Roaming\\com.qoder.app.stable\\User",
+    "AppData\\Roaming\\com.qoder.app.stable\\User\\History",
+    "AppData\\Roaming\\com.qoder.app.stable\\User\\globalStorage",
+    "AppData\\Roaming\\com.qoder.app.stable\\User\\workspaceStorage",
+    "AppData\\Roaming\\com.qoder.app.stable\\Backups",
+    "AppData\\Roaming\\com.qoder.app.stable\\Local Storage",
+    "AppData\\Roaming\\com.qoder.app.stable\\IndexedDB",
+    "AppData\\Roaming\\com.qoder.app.stable\\Session Storage",
+    "AppData\\Roaming\\com.qoder.app.stable\\Network\\Cookies"
+  ],
+  "category": "user-data",
+  "trust": "inventory-only",
+  "blockers": ["protected-path", "owner-process-active", "unsaved-drafts-possible", "layout-assumed-not-verified"],
+  "processes": { "owners": ["Qoder.exe"], "helpers": [] },
+  "requiredEvidence": ["protection-rule-removed-by-user-decision"],
+  "regenerationCost": "high",
+  "recoveryPolicy": "not-recoverable"
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "codex.worktrees.managed",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "Codex", "versions": ["unverified"] },
+  "allowedRelativePaths": [".codex\\worktrees"],
+  "category": "user-data",
+  "trust": "inventory-only",
+  "blockers": ["protected-path", "no-cleanup-checkbox", "managed-by-app-or-git", "owner-process-active"],
+  "processes": { "owners": ["codex.exe"], "helpers": ["git.exe"] },
+  "requiredEvidence": ["app-or-git-lifecycle"],
+  "regenerationCost": "high",
+  "recoveryPolicy": "not-recoverable"
+}

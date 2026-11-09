@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "go.build",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "GoBuild", "versions": ["unverified"] },
+  "allowedRelativePaths": ["AppData\\Local\\go-build"],
+  "category": "build-cache",
+  "trust": "inventory-only",
+  "blockers": ["gocache-unresolved", "build-active", "root-not-deletable"],
+  "processes": { "owners": ["go.exe"], "helpers": ["gopls.exe"] },
+  "requiredEvidence": ["gocache-resolved", "build-idle", "rebuild-cost-explained"],
+  "regenerationCost": "unknown",
+  "recoveryPolicy": "quarantine"
+}

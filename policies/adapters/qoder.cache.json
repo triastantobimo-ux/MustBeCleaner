@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "qoder.electron.cache",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "Qoder", "versions": ["unverified"] },
+  "allowedRelativePaths": [
+    "AppData\\Roaming\\com.qoder.app.stable\\Cache",
+    "AppData\\Roaming\\com.qoder.app.stable\\Code Cache",
+    "AppData\\Roaming\\com.qoder.app.stable\\GPUCache"
+  ],
+  "category": "cache",
+  "trust": "inventory-only",
+  "blockers": ["owner-process-active", "lock-present", "root-not-deletable", "layout-assumed-not-verified"],
+  "processes": { "owners": ["Qoder.exe"], "helpers": [] },
+  "requiredEvidence": ["cache-rule-validated", "per-profile-scope-confirmed", "app-idle"],
+  "regenerationCost": "unknown",
+  "recoveryPolicy": "quarantine"
+}

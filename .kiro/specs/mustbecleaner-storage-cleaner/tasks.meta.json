@@ -1,0 +1,574 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Spike evaluasi stack/framework (tanpa komitmen)": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234091450
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234105484
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234743793
+      }
+    ],
+    "1.2 Spike pengikatan identitas objek (gerbang rilis destruktif)": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234091721
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234105623
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234743993
+      }
+    ],
+    "1.3 Siapkan kerangka uji: fake filesystem dan fixture sandbox": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234091906
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234106106
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234744106
+      }
+    ],
+    "2.1 Definisikan tipe dan kontrak inti": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234091996
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234749875
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235148375
+      }
+    ],
+    "2.2 Implementasikan `normalizePath`, penolakan path terlarang, dan exclusion": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234092103
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235156278
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235552889
+      }
+    ],
+    "2.3 Implementasikan `classify` dengan daftar proteksi dan eligibility Tri_State": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234092193
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235561837
+      },
+      {
+        "executionId": "7d770492-6e12-4073-aa07-74b7b5a13b67",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235900371
+      },
+      {
+        "executionId": "7d770492-6e12-4073-aa07-74b7b5a13b67",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794236106920
+      }
+    ],
+    "3.1 Definisikan skema Adapter dan loader deklaratif": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234092266
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234750041
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235148590
+      }
+    ],
+    "3.2 Buat data Adapter awal berstatus inventory-only": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234092345
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235156474
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235553019
+      }
+    ],
+    "3.3 Implementasikan `matchAdapter` dan `importUpdate`": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234092420
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235561985
+      },
+      {
+        "executionId": "7d770492-6e12-4073-aa07-74b7b5a13b67",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235887702
+      }
+    ],
+    "4.1 Implementasikan skema persistence dan Data_Directory fail-closed": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234092501
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234750199
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235148701
+      }
+    ],
+    "4.2 Implementasikan logging tanpa secret, Exception_Log, dan retention": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234092621
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235156577
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235553186
+      }
+    ],
+    "5.1 Implementasikan enumerasi metadata read-only dan penanganan reparse point": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234092695
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235156711
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235553366
+      }
+    ],
+    "5.2 Implementasikan identitas Item, hard link, dan perhitungan total unik": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234092772
+      },
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235562081
+      },
+      {
+        "executionId": "7d770492-6e12-4073-aa07-74b7b5a13b67",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235888040
+      }
+    ],
+    "5.3 Implementasikan coverage, progress, pause/cancel, dan mode low-I/O": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234092854
+      }
+    ],
+    "5.4 Implementasikan storage overview dan delta antar-scan": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234092931
+      }
+    ],
+    "5.5 Implementasikan Registry_Review read-only": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234093018
+      }
+    ],
+    "6.1 Bangun shell, navigasi, tema, dan bahasa": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234093098
+      }
+    ],
+    "6.2 Bangun tabel kandidat, inspector kanan, dan filter": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234093170
+      }
+    ],
+    "6.3 Bangun first run, pemilihan Scope, dan daftar exclusion": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234093283
+      }
+    ],
+    "6.4 Implementasikan export CSV/JSON/HTML lokal dengan opsi redaksi path": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234093355
+      }
+    ],
+    "7. Checkpoint Fase 1 - Pastikan semua tes lulus": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234093436
+      }
+    ],
+    "8.1 Implementasikan seleksi dan `selectEligible`": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234093572
+      }
+    ],
+    "8.2 Implementasikan `approve` dan Manifest immutable": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234093652
+      }
+    ],
+    "9.1 Implementasikan preflight dan revalidasi independen": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234093729
+      }
+    ],
+    "9.2 Implementasikan Quarantine C: ke D: dengan tahap Journal": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234093804
+      }
+    ],
+    "9.3 Implementasikan Recycle Bin, permanent purge terpisah, dan maintenance command": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234093889
+      }
+    ],
+    "9.4 Implementasikan state machine eksekusi dan pembatalan": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234093968
+      }
+    ],
+    "9.5 Implementasikan `recoverOnStartup`": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234094055
+      }
+    ],
+    "9.6 Implementasikan restore sebagai job terpisah": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234094124
+      }
+    ],
+    "10.1 Implementasikan laporan dan akuntansi byte terpisah": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234094204
+      }
+    ],
+    "11.1 Bangun ringkasan pilihan, Plan, dan persetujuan Manifest": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234094296
+      }
+    ],
+    "11.2 Bangun progress eksekusi, hasil, dan pesan state khusus": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234094373
+      }
+    ],
+    "11.3 Bangun tampilan Recovery dan Riwayat & laporan": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234094474
+      }
+    ],
+    "12.1 Implementasikan suite adversarial pada fixture": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234094620
+      }
+    ],
+    "12.2 Implementasikan injeksi crash pada setiap tahap Journal": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234094710
+      }
+    ],
+    "12.3 Tetapkan gerbang rilis Fase 2": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234094803
+      }
+    ],
+    "13. Checkpoint Fase 2 - Pastikan semua tes lulus": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234094888
+      }
+    ],
+    "14.1 Implementasikan exact duplicate file": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234094986
+      }
+    ],
+    "14.2 Implementasikan hash cache dengan invalidasi identitas": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234095073
+      }
+    ],
+    "14.3 Implementasikan `buildFolderManifest` dan `findExactFolders`": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234095167
+      }
+    ],
+    "14.4 Implementasikan penandaan unsupported-for-cleanup dan penolakan overlap": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234095254
+      }
+    ],
+    "14.5 Integrasikan Keeper dengan Plan Service dan Executor": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234095328
+      }
+    ],
+    "14.11 Bangun UI Duplikat": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234095408
+      }
+    ],
+    "15. Checkpoint Fase 3 - Pastikan semua tes lulus": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234095500
+      }
+    ],
+    "16.1 Implementasikan kecocokan nama/path": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234095582
+      }
+    ],
+    "16.2 Implementasikan kecocokan teks dengan tampilan bagian berbeda": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234095670
+      }
+    ],
+    "16.3 Implementasikan kecocokan gambar berdampingan dengan resolusi": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234095763
+      }
+    ],
+    "16.4 Implementasikan kecocokan folder (overlap path dan konten terbobot)": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234095848
+      }
+    ],
+    "16.5 Laporkan tipe dokumen tanpa parser sebagai tidak didukung": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234095935
+      }
+    ],
+    "16.6 Bangun UI Similar items": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234096018
+      }
+    ],
+    "17. Checkpoint Fase 4 - Pastikan semua tes lulus": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234096099
+      }
+    ],
+    "18.1 Bangun harness baseline performa di hardware target": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234096196
+      }
+    ],
+    "18.2 Uji pertumbuhan Data_Directory": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234096308
+      }
+    ],
+    "19.1 Implementasikan uji offline tanpa lalu lintas keluar": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234096395
+      }
+    ],
+    "19.2 Implementasikan tinjauan otomatis ACL dan privasi Data_Directory": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234096533
+      }
+    ],
+    "19.3 Tambahkan smoke test invarian arsitektur": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234096619
+      }
+    ],
+    "20.1 Jalankan audit kontras, keyboard, dan layout lintas DPI": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234096703
+      }
+    ],
+    "21. Checkpoint akhir - Pastikan semua tes lulus": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234096816
+      }
+    ],
+    "1. Spike keputusan stack dan fondasi pengujian aman": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794234744215
+      }
+    ],
+    "4. Journal Store (batas persistence)": [
+      {
+        "executionId": "daebb583-771c-4865-a8d5-d4b4dbb4d8c0",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235553265
+      }
+    ],
+    "3. Adapter Catalog (data-only)": [
+      {
+        "executionId": "7d770492-6e12-4073-aa07-74b7b5a13b67",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794235887894
+      }
+    ],
+    "2. Policy Core (murni, tanpa I/O)": [
+      {
+        "executionId": "7d770492-6e12-4073-aa07-74b7b5a13b67",
+        "chatSessionId": "sess_1466ffc1-bdec-4263-947e-f8291b6a601b",
+        "timestamp": 1794236107110
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "codex.home.protected",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "Codex", "versions": ["unverified"] },
+  "allowedRelativePaths": [
+    ".codex\\sessions",
+    ".codex\\archived_sessions",
+    ".codex\\memories",
+    ".codex\\auth.json",
+    ".codex\\config.toml",
+    ".codex\\thread_history_1.sqlite",
+    ".codex\\thread_history_1.sqlite-wal",
+    ".codex\\thread_history_1.sqlite-shm",
+    ".codex\\logs_2.sqlite",
+    ".codex\\logs_2.sqlite-wal",
+    ".codex\\logs_2.sqlite-shm",
+    ".codex\\.chatgpt-projects",
+    ".codex\\skills",
+    ".codex\\.sandbox-bin"
+  ],
+  "category": "user-data",
+  "trust": "inventory-only",
+  "blockers": ["protected-path", "owner-process-active"],
+  "processes": { "owners": ["codex.exe"], "helpers": [] },
+  "requiredEvidence": ["protection-rule-removed-by-user-decision"],
+  "regenerationCost": "high",
+  "recoveryPolicy": "not-recoverable"
+}

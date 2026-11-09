@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "openai.codex.package",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "OpenAICodexPackage", "versions": ["unverified"] },
+  "allowedRelativePaths": ["AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0"],
+  "category": "other",
+  "trust": "inventory-only",
+  "blockers": ["owner-process-active", "root-not-deletable", "package-id-unconfirmed"],
+  "processes": { "owners": ["codex.exe"], "helpers": [] },
+  "requiredEvidence": ["desktop-install-package-id-detected", "actual-profile-path-confirmed", "cache-rule-validated", "app-idle"],
+  "regenerationCost": "unknown",
+  "recoveryPolicy": "quarantine"
+}

@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MustBeCleaner.Domain\MustBeCleaner.Domain.csproj" />
+    <ProjectReference Include="..\MustBeCleaner.Adapters\MustBeCleaner.Adapters.csproj" />
+    <ProjectReference Include="..\MustBeCleaner.Infrastructure\MustBeCleaner.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

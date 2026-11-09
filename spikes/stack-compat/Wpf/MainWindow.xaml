@@ -1,0 +1,19 @@
+<ui:FluentWindow x:Class="Spike.Shell.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:local="clr-namespace:Spike.Shell"
+        Title="MustBeCleaner stack spike" Width="900" Height="560"
+        ExtendsContentIntoTitleBar="True" WindowBackdropType="Mica">
+  <Grid>
+    <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+    <ui:TitleBar Title="MustBeCleaner stack spike" />
+    <ui:NavigationView Grid.Row="1" x:Name="Nav" PaneDisplayMode="Left">
+      <ui:NavigationView.MenuItems>
+        <ui:NavigationViewItem Content="Scan" Icon="{ui:SymbolIcon Search24}" TargetPageType="{x:Type local:StatusPage}" />
+        <ui:NavigationViewItem Content="Review" Icon="{ui:SymbolIcon DocumentSearch24}" TargetPageType="{x:Type local:StatusPage}" />
+      </ui:NavigationView.MenuItems>
+    </ui:NavigationView>
+  </Grid>
+</ui:FluentWindow>
+

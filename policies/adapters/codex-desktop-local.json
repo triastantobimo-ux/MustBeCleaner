@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "codex.desktop.local",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "CodexDesktop", "versions": ["unverified"] },
+  "allowedRelativePaths": ["AppData\\Local\\Codex"],
+  "category": "other",
+  "trust": "inventory-only",
+  "blockers": ["owner-process-active", "root-not-deletable", "profile-path-unconfirmed"],
+  "processes": { "owners": ["codex.exe"], "helpers": [] },
+  "requiredEvidence": ["actual-profile-path-confirmed", "cache-rule-validated", "app-idle"],
+  "regenerationCost": "unknown",
+  "recoveryPolicy": "quarantine"
+}

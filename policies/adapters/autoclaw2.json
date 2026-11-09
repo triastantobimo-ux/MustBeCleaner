@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "autoclaw2.inventory",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "AutoClaw2", "versions": ["unverified"] },
+  "allowedRelativePaths": ["AppData\\Local\\AutoClaw 2"],
+  "category": "other",
+  "trust": "inventory-only",
+  "blockers": ["layout-unverified", "version-unverified", "root-not-deletable", "owner-process-active"],
+  "processes": { "owners": [], "helpers": [] },
+  "requiredEvidence": ["layout-verified", "version-verified", "cache-rule-validated"],
+  "regenerationCost": "unknown",
+  "recoveryPolicy": "not-recoverable"
+}

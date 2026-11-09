@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "ruleId": "code.electron.protected",
+  "version": "0.1.0",
+  "sourceReference": "docs/LOCAL_STORAGE_REVIEW.md; docs/PRODUCT_BLUEPRINT.md section 6",
+  "fingerprint": { "appId": "Code", "versions": ["unverified"] },
+  "allowedRelativePaths": [
+    "AppData\\Roaming\\Code\\User",
+    "AppData\\Roaming\\Code\\User\\History",
+    "AppData\\Roaming\\Code\\User\\globalStorage",
+    "AppData\\Roaming\\Code\\User\\workspaceStorage",
+    "AppData\\Roaming\\Code\\Backups",
+    ".vscode\\extensions",
+    "AppData\\Roaming\\Code\\Local Storage",
+    "AppData\\Roaming\\Code\\IndexedDB",
+    "AppData\\Roaming\\Code\\Session Storage",
+    "AppData\\Roaming\\Code\\Network\\Cookies"
+  ],
+  "category": "user-data",
+  "trust": "inventory-only",
+  "blockers": ["protected-path", "owner-process-active", "unsaved-drafts-possible"],
+  "processes": { "owners": ["Code.exe"], "helpers": [] },
+  "requiredEvidence": ["protection-rule-removed-by-user-decision"],
+  "regenerationCost": "high",
+  "recoveryPolicy": "not-recoverable"
+}
